@@ -1,0 +1,179 @@
+@base-colour: #54C5D0; // PatientSky Blue
+@white-colour: #fff; // White
+@grey-colour: #F8F8F8; // Gray
+@red-colour: #DF644D;
+@black-colour: #000;
+@header-colour: darken(@base-colour, 10%);
+@max-content-width: 1200px;
+
+body {
+    font: 16px/1.2 Helvetica, sans-serif;
+    background-color: @white-colour;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 1em 2em;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid @header-colour;
+    background: @base-colour;
+
+    .logo {
+        a {
+            color: @white-colour;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    }
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li a {
+                display: block;
+                padding: 0 1em;
+                color: @white-colour;
+                text-decoration: none;
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+.container {
+    width: @max-content-width;
+    padding: 0 2em;
+    margin: 0 auto;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 1em 0;
+}
+button {
+    height: 40px;
+    display: inline-block;
+    padding: 0 1em;
+    border: none;
+    width: 80%;
+
+}
+button[type="submit"], .btn-primary {
+    background: @base-colour;
+    color: @white-colour;
+}
+button.btn-cancel {
+    background: @red-colour;
+    color: @white-colour;
+}
+button.btn-reset {
+    background: @grey-colour;
+    color: @black-colour;
+    margin: 0 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.form-control {
+    height: 40px;
+    margin: 0.5em 0;
+    padding: 0 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.react-bs-table .react-bs-container-header > table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.react-bs-table table td, .react-bs-table table th {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.react-bs-table table {
+    margin-bottom: 0;
+    table-layout: fixed;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+}
+table td, table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #eceeef;
+}
+
+
+
+/* MEDICINE PAGE */
+
+.medicine--list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        border: 1px solid @grey-colour;
+        width: 100%;
+        padding: 1em;
+    }
+    label {
+         color: @base-colour;
+    }
+}
+
+
+
+footer {
+    padding: 6% 6% 20%;
+
+    .content {
+        margin-bottom: 20px;
+        font-size: 0.8em;
+
+        h4 {
+            color: @white-colour;
+        }
+
+        p {
+            line-height: 20px;
+            color:  lighten(@base-colour, 20%);
+
+            a {
+                color: inherit;
+                text-decoration: inherit;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    body {
+        font: 80%/1.2 Helvetica, sans-serif;
+    }
+
+
+}
+
+@media screen and (min-width: 961px) {
+    body {
+        font: 80%/1.2 Helvetica, sans-serif;
+    }
+}
