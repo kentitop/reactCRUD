@@ -13,12 +13,8 @@ git clone https://github.com/kentitop/reactCRUD.git
 
 cd reactCRUD
 
-yarn install
-    or
 npm install
 
-yarn start
-    or
 npm start
 ```
 
