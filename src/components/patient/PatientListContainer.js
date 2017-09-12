@@ -31,7 +31,7 @@ export class PatientListContainer extends React.Component {
 
 
     handleAddPatient() {
-        this.props.history.push('/');
+        this.props.history.push('/patient');
     }
 
 
